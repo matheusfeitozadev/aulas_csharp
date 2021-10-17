@@ -1,5 +1,8 @@
-﻿using System;
+﻿using LogicaProgramacao.Classes;
+using LogicaProgramacao.Classes.Assembly;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +11,6 @@ namespace LogicaProgramacao
 {
     class Program
     {
-        
-
         static void Main(string[] args)
         {
             #region Prologo
@@ -251,6 +252,85 @@ namespace LogicaProgramacao
 
 
             #endregion
+
+            #endregion
+
+            #region Chamadas de classes
+
+            //PrimeiraClasse primeiraClasse = new PrimeiraClasse();
+            ////primeiraClasse.NomeDoUsuario = "Matheus feitoza";
+            ////primeiraClasse.Idade = 10;
+
+            ////primeiraClasse = new PrimeiraClasse(27);
+
+            //primeiraClasse.CalcularIdadeAtual();
+
+            //PrimeiraClasse.Chamada();
+
+            //Console.WriteLine("Sua idade é: " + primeiraClasse.Idade);
+            //Console.ReadLine();
+
+            #endregion
+
+            #region Chamadas de Classes PT 2
+
+            //List<Customer> customers = new List<Customer>();
+
+            //Customer customerPositivo = new Customer();
+            //customerPositivo.Id = 54;
+            //customerPositivo.CustomerName = "POSITIVO";
+            //customerPositivo.Active = true;
+
+            //Customer customerSamsung = new Customer();
+            //customerSamsung.Id = 42;
+            //customerSamsung.CustomerName = "SAMSUNG";
+            //customerSamsung.Active = true;
+
+            //customers.Add(customerPositivo);
+            //customers.Add(customerSamsung);
+
+            //foreach(var item in customers)
+            //{
+            //    string texto = "";
+
+            //    texto += "Id: " + item.Id;
+            //    texto += "\nCustomer Name: " + item.CustomerName;
+            //    texto += "\nActive: " + item.Active;
+
+            //    Console.WriteLine(texto);
+            //    Console.WriteLine("______________________________");
+            //}
+
+
+            Customer customer = new Customer();
+            customer.Id = 54;
+            customer.CustomerName = "POSITIVO";
+            customer.Active = true;
+
+            Factory factory = new Factory();
+            factory.Id = 1;
+            factory.Name = "Jabil MTX";
+            factory.Active = true;
+
+            Property propriedade1 = new Property();
+            propriedade1.Id = 1;
+            propriedade1.PropertyName = "ISBIRTH";
+            propriedade1.PropertyValue = "TRUE";
+            propriedade1.Active = true;
+
+            Property propriedade2 = new Property();
+            propriedade2.Id = 1;
+            propriedade2.PropertyName = "BOARDLABEL";
+            propriedade2.PropertyValue = @"\\brmanm0loft01\Labels\teste.lwl";
+            propriedade2.Active = true;
+
+            Assembly assembly = new Assembly();
+            assembly.AssemblyName = "POS1212A";
+            assembly.Customer = customer;
+            assembly.Factory = factory;
+
+            Console.ReadLine();
+
 
             #endregion
         }
