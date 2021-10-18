@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,10 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Assembly\Assembly.cs" />
+    <Compile Include="Classes\Assembly\Boxe.cs" />
     <Compile Include="Classes\Assembly\ClassBase.cs" />
     <Compile Include="Classes\Assembly\Customer.cs" />
+    <Compile Include="Classes\Assembly\Enum\StatusPalletEnum.cs" />
     <Compile Include="Classes\Assembly\Factory.cs" />
+    <Compile Include="Classes\Assembly\Interfaces\GenericInterface.cs" />
     <Compile Include="Classes\Assembly\Property.cs" />
+    <Compile Include="Classes\Constants\Constant.cs" />
     <Compile Include="Classes\CRD.cs" />
     <Compile Include="Classes\Placa.cs" />
     <Compile Include="Classes\PrimeiraClasse.cs" />

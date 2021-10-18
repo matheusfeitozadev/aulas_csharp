@@ -12,6 +12,16 @@ namespace LogicaProgramacao.Classes.Assembly
         public Factory Factory { get; set; }
         public Customer Customer { get; set; }
         public List<Property> Properties { get; set; }
+
+        public void Add(Assembly model)
+        {
+
+        }
+
+        public void Update()
+        {
+
+        }
     }
 
     //Herança e Interfaces

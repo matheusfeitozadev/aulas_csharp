@@ -1,5 +1,7 @@
 ﻿using LogicaProgramacao.Classes;
 using LogicaProgramacao.Classes.Assembly;
+using LogicaProgramacao.Classes.Assembly.Enum;
+using LogicaProgramacao.Classes.Constants;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -301,38 +303,159 @@ namespace LogicaProgramacao
             //    Console.WriteLine("______________________________");
             //}
 
+            //List<Property> itensProperies = new List<Property>();
 
-            Customer customer = new Customer();
-            customer.Id = 54;
-            customer.CustomerName = "POSITIVO";
-            customer.Active = true;
+            //Customer customer = new Customer();
+            //customer.Id = 54;
+            //customer.CustomerName = "POSITIVO";
+            //customer.Active = true;
 
-            Factory factory = new Factory();
-            factory.Id = 1;
-            factory.Name = "Jabil MTX";
-            factory.Active = true;
+            //Factory factory = new Factory();
+            //factory.Id = 1;
+            //factory.Name = "Jabil MTX";
+            //factory.Active = true;
 
-            Property propriedade1 = new Property();
-            propriedade1.Id = 1;
-            propriedade1.PropertyName = "ISBIRTH";
-            propriedade1.PropertyValue = "TRUE";
-            propriedade1.Active = true;
+            //Property propriedade1 = new Property();
+            //propriedade1.Id = 1;
+            //propriedade1.PropertyName = "ISBIRTH";
+            //propriedade1.PropertyValue = "TRUE";
+            //propriedade1.Active = true;
 
-            Property propriedade2 = new Property();
-            propriedade2.Id = 1;
-            propriedade2.PropertyName = "BOARDLABEL";
-            propriedade2.PropertyValue = @"\\brmanm0loft01\Labels\teste.lwl";
-            propriedade2.Active = true;
+            //Property propriedade2 = new Property();
+            //propriedade2.Id = 1;
+            //propriedade2.PropertyName = "BOARDLABEL";
+            //propriedade2.PropertyValue = @"\\brmanm0loft01\Labels\teste.lwl";
+            //propriedade2.Active = true;
 
-            Assembly assembly = new Assembly();
-            assembly.AssemblyName = "POS1212A";
-            assembly.Customer = customer;
-            assembly.Factory = factory;
+            ////itensProperies.Add(propriedade1);
+            ////itensProperies.Add(propriedade2);
 
-            Console.ReadLine();
+            //Assembly assembly = new Assembly();
+            //assembly.Id = 1;
+            //assembly.AssemblyName = "POS1212A";
+            //assembly.Customer = customer;
+            //assembly.Factory = factory;
+            ////assembly.Properties = itensProperies;
+            //assembly.Properties = new List<Property>() { propriedade1, propriedade2 };
+            //assembly.Active = true;
+
+            ////Exibindo informações
+            //string conteudo = "";
+
+            //conteudo += string.Format("Assembly Name: {0}\n", assembly.AssemblyName);
+            //conteudo += string.Format("Factory: {0} \n", assembly.Factory.Name);
+            //conteudo += string.Format("Customer Name: {0} \n", assembly.Customer.CustomerName);
+
+            //foreach(var item in assembly.Properties)
+            //{
+            //    conteudo += string.Format("Property: {0}, Value: {1} \n", item.PropertyName, item.PropertyValue);
+            //}
+
+            //Console.WriteLine(conteudo);
+
+
+
 
 
             #endregion
+
+            #region Enum
+            //Boxe boxe1 = new Boxe("POSBOX123", (int)StatusPalletEnum.Packed);
+
+            //Boxe boxe2 = new Boxe("POSBOX123", (int)StatusPalletEnum.OnHold);
+
+            //Boxe boxe3 = new Boxe("POSBOX123", (int)StatusPalletEnum.Partial);
+
+            //Boxe boxe4 = new Boxe("POSBOX123", (int)StatusPalletEnum.Used);
+
+            //Console.WriteLine((int)StatusPalletEnum.Packed);
+            #endregion
+
+            #region Files
+            //string path = @"C:\AiOLog.txt";
+
+            //var fileExists = File.Exists(path);
+
+            //File.Delete(path);
+            //File.Copy(path, @"D:\novo.txt", true);
+
+            //File.WriteAllText(path, "Teste Matheus");
+
+            //if(fileExists)
+            //{
+            //    Console.WriteLine("Arquivo existe!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Arquivo não existe!");
+            //}
+
+            #endregion
+
+            #region Directory
+            string dir = @"C:\Projetos\";
+
+            var dirExists = Directory.Exists(dir);
+
+            if(!dirExists)
+            {
+                Directory.CreateDirectory(dir);
+            }
+
+            //Directory.Delete(dir);
+
+            var files = Directory.GetFiles(dir);
+
+            foreach(var item in files)
+            {
+                try
+                {
+                    string serial = "";
+                    string conteudo = "";
+
+                    var strReadAllText = File.ReadAllText(item);
+                    var strReadAllLines = File.ReadAllLines(item);
+
+                    FileInfo fileInfo = new FileInfo(item);
+
+                    //Char e String
+                    // 'C' "C"
+
+                    serial = fileInfo.Name.Split('.')[3];
+
+                    conteudo += "C" + Constant.Customer + Environment.NewLine;
+                    conteudo += "I" + Constant.Division + Environment.NewLine;
+                    conteudo += "S" + serial + Environment.NewLine;
+                    conteudo += "P" + Constant.Equipment + Environment.NewLine;
+                    conteudo += "F" + Constant.Test + Environment.NewLine;
+                    conteudo += "TP" + Environment.NewLine;
+
+                    File.WriteAllText(dir + "parser01.txt", conteudo);
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+               
+
+                Console.WriteLine(item);
+            }
+
+           
+
+            //S - Serial
+            //C - Customer
+            //I - Divison
+            //P - Equipement
+            //F - Test
+            //TP(Pass) ou TF(Fail)     
+
+            
+
+            #endregion
+
+
+            Console.ReadLine();
         }
 
         static bool executeVerification()

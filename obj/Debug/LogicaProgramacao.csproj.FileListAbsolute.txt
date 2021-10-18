@@ -5,3 +5,10 @@ D:\PJ\Curso Desenvolvimento em Apps\Aulas\Parte 1\LogicaProgramacao\obj\Debug\Lo
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\Parte 1\LogicaProgramacao\obj\Debug\LogicaProgramacao.csproj.CoreCompileInputs.cache
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\Parte 1\LogicaProgramacao\obj\Debug\LogicaProgramacao.exe
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\Parte 1\LogicaProgramacao\obj\Debug\LogicaProgramacao.pdb
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\bin\Debug\LogicaProgramacao.exe.config
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\bin\Debug\LogicaProgramacao.exe
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\bin\Debug\LogicaProgramacao.pdb
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\obj\Debug\LogicaProgramacao.csprojAssemblyReference.cache
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\obj\Debug\LogicaProgramacao.csproj.CoreCompileInputs.cache
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\obj\Debug\LogicaProgramacao.exe
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\obj\Debug\LogicaProgramacao.pdb
