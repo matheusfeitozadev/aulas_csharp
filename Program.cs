@@ -13,6 +13,17 @@ namespace LogicaProgramacao
 {
     class Program
     {
+        // Console application = Script executado no prompt de comando
+        // Quando houver necessidade de fazer alguma execução que não precise de interface gráfica
+
+        //APP01 -> Enviam email de relatório -> Mac Control(Consumo de MAC, )
+
+        // Task Schedule(APP01) -> 3 itens (Console application)
+
+        //Parser Samsung ARD3 -> Console Application
+
+        //Forms ou Console - Onde está o executavel? Bin/Debug || Release -> 
+
         static void Main(string[] args)
         {
             #region Prologo
@@ -372,23 +383,23 @@ namespace LogicaProgramacao
             #endregion
 
             #region Files
-            //string path = @"C:\AiOLog.txt";
+            string path = @"C:\AiOLog.txt";
 
-            //var fileExists = File.Exists(path);
+            var fileExists = File.Exists(path);
 
-            //File.Delete(path);
-            //File.Copy(path, @"D:\novo.txt", true);
+            File.Delete(path);
+            File.Copy(path, @"D:\novo.txt", true);
 
-            //File.WriteAllText(path, "Teste Matheus");
+            File.WriteAllText(path, "Teste Matheus");
 
-            //if(fileExists)
-            //{
-            //    Console.WriteLine("Arquivo existe!");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Arquivo não existe!");
-            //}
+            if (fileExists)
+            {
+                Console.WriteLine("Arquivo existe!");
+            }
+            else
+            {
+                Console.WriteLine("Arquivo não existe!");
+            }
 
             #endregion
 
