@@ -21,11 +21,16 @@ namespace WinForms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            CheckUser();
+        }
+
+        private void CheckUser()
+        {
             var user = new Usuario(txtLogin.Text, txtPassword.Text, chkLembrarSenha.Checked);
 
             var message = user.CheckUserAuth();
 
-            if(string.IsNullOrEmpty(message))
+            if (string.IsNullOrEmpty(message))
             {
                 setStatus("OK", LblStatusEnum.OK);
             }
@@ -60,6 +65,19 @@ namespace WinForms
             }
 
             lblStatus.Refresh();
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyValue.ToString().Equals("13"))
+            {
+                CheckUser();
+            }
         }
     }
 }

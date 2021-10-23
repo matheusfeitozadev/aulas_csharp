@@ -43,7 +43,7 @@
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(31, 309);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(112, 32);
             this.btnLogin.TabIndex = 0;
@@ -75,7 +75,7 @@
             // txtLogin
             // 
             this.txtLogin.Location = new System.Drawing.Point(85, 123);
-            this.txtLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(148, 26);
             this.txtLogin.TabIndex = 3;
@@ -83,11 +83,13 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(85, 207);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(148, 26);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            this.txtPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyUp);
             // 
             // lblStatus
             // 
@@ -145,7 +147,7 @@
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnLogin);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EPS";
