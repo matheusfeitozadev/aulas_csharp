@@ -74,7 +74,7 @@ namespace WinForms
 
         private void txtPassword_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyValue.ToString().Equals("13"))
+            if (e.KeyValue.ToString().Equals("13"))
             {
                 CheckUser();
             }

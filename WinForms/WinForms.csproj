@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Assembly\Assembly.cs" />
+    <Compile Include="Classes\Assembly\Boxe.cs" />
+    <Compile Include="Classes\Assembly\ClassBase.cs" />
+    <Compile Include="Classes\Assembly\Customer.cs" />
+    <Compile Include="Classes\Assembly\Enum\StatusPalletEnum.cs" />
+    <Compile Include="Classes\Assembly\Factory.cs" />
+    <Compile Include="Classes\Assembly\Interfaces\GenericInterface.cs" />
+    <Compile Include="Classes\Assembly\Property.cs" />
     <Compile Include="Classes\Enum\LblStatusEnum.cs" />
     <Compile Include="Classes\Usuario.cs" />
     <Compile Include="Form1.cs">
@@ -60,10 +68,19 @@
     <Compile Include="Forms\Atividade1\FormAtividade1.Designer.cs">
       <DependentUpon>FormAtividade1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Atividade3\FormAtividade3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Atividade3\FormAtividade3.Designer.cs">
+      <DependentUpon>FormAtividade3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Atividade3\FormAtividade3.resx">
+      <DependentUpon>FormAtividade3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
