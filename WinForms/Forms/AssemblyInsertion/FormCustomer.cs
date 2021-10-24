@@ -26,6 +26,8 @@ namespace WinForms.Forms.AssemblyInsertion
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            bool isOK = true;
+
             var customer = new Customer(txtCustomer.Text.ToUpper(), true);
 
             var message = customer.CheckInformation();
@@ -33,12 +35,28 @@ namespace WinForms.Forms.AssemblyInsertion
             if(!string.IsNullOrEmpty(message))
             {
                 MessageBox.Show(message);
+
+                isOK = false;
+            }
+            else
+            {
+                //verificar se o cliente já existe na lista
+                var exists = customers.Where(x => x.CustomerName.ToUpper().Equals(customer.CustomerName)).FirstOrDefault();
+
+                if(exists != null)
+                {
+                    MessageBox.Show("This Customer already exists!");
+                    isOK = false;
+                }
             }
 
-            //Enviar para o banco de dados...
-            customers.Add(customer);
+            if(isOK)
+            {
+                //Enviar para o banco de dados...
+                customers.Add(customer);
 
-            ClearInformation();
+                ClearInformation();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
