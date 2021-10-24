@@ -9,3 +9,5 @@ D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\obj\Debug\WinFor
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\obj\Debug\WinForms.exe
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\obj\Debug\WinForms.pdb
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\obj\Debug\WinForms.Forms.Atividade3.FormAtividade3.resources
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\obj\Debug\WinForms.Forms.AssemblyInsertion.FormMain.resources
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\obj\Debug\WinForms.Forms.AssemblyInsertion.FormCustomer.resources
