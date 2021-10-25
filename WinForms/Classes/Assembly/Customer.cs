@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LogicaProgramacao.Classes.Assembly
 {
@@ -61,6 +62,26 @@ namespace LogicaProgramacao.Classes.Assembly
             });
 
             return customers;
+        }
+
+        public static ListViewItem[] FillListView(List<Customer> customers)
+        {
+            List<ListViewItem> list = new List<ListViewItem>();
+
+            foreach (var item in customers)
+            {
+                string[] values = {
+                    item.Id.ToString(),
+                    item.CustomerName,
+                    item.Active ? "A" : "I"
+                };
+
+                ListViewItem row = new ListViewItem(values);
+
+                list.Add(row);
+            }
+
+            return list.ToArray();
         }
 
         public void Add(Customer model)

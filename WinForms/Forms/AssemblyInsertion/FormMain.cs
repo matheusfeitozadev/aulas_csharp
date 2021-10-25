@@ -37,5 +37,11 @@ namespace WinForms.Forms.AssemblyInsertion
             panelMain.Controls.Add(form);
             form.Show();
         }
+
+        private void listToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var form = new FormCustomerList();
+            showForm(form);
+        }
     }
 }

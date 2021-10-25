@@ -85,6 +85,10 @@ namespace WinForms.Forms.AssemblyInsertion
             obj.CustomerName = "POSITIVO";
             obj.Active = true;
 
+            //1 - SqlConnection, SqlCommand -> SqlReader
+            //2 - Entity Framework (Framework - Livre) -> Ele possibilita você fazer consultas nas tabelas utilizando o Link
+            //3 - Microservices or MicroOrms -> Dapper
+
             //List All
             //select * from Customer
             var list = customers.ToList();
