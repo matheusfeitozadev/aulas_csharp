@@ -58,7 +58,7 @@ namespace LogicaProgramacao.Classes.Assembly
             {
                 Id = 65,
                 CustomerName = "JCH",
-                Active = true
+                Active = false
             });
 
             return customers;
@@ -73,7 +73,7 @@ namespace LogicaProgramacao.Classes.Assembly
                 string[] values = {
                     item.Id.ToString(),
                     item.CustomerName,
-                    item.Active ? "A" : "I"
+                    item.Active.ToString()
                 };
 
                 ListViewItem row = new ListViewItem(values);
@@ -83,6 +83,8 @@ namespace LogicaProgramacao.Classes.Assembly
 
             return list.ToArray();
         }
+
+        
 
         public void Add(Customer model)
         {

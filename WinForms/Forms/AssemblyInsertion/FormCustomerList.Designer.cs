@@ -40,7 +40,12 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gridViewCustomer = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Active = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -111,6 +116,7 @@
             this.btnClear.TabIndex = 8;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSearch
             // 
@@ -120,6 +126,7 @@
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // listViewCustomer
             // 
@@ -148,17 +155,57 @@
             // 
             this.columnHeader3.Text = "Active";
             // 
+            // gridViewCustomer
+            // 
+            this.gridViewCustomer.AllowUserToAddRows = false;
+            this.gridViewCustomer.AllowUserToDeleteRows = false;
+            this.gridViewCustomer.AllowUserToOrderColumns = true;
+            this.gridViewCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.CustomerName,
+            this.Active});
+            this.gridViewCustomer.Location = new System.Drawing.Point(388, 160);
+            this.gridViewCustomer.MultiSelect = false;
+            this.gridViewCustomer.Name = "gridViewCustomer";
+            this.gridViewCustomer.ReadOnly = true;
+            this.gridViewCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridViewCustomer.Size = new System.Drawing.Size(413, 177);
+            this.gridViewCustomer.TabIndex = 2;
+            this.gridViewCustomer.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewCustomer_CellDoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.HeaderText = "Customer Name";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.ReadOnly = true;
+            this.CustomerName.Width = 200;
+            // 
+            // Active
+            // 
+            this.Active.HeaderText = "Active";
+            this.Active.Name = "Active";
+            this.Active.ReadOnly = true;
+            // 
             // FormCustomerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 349);
+            this.ClientSize = new System.Drawing.Size(823, 349);
+            this.Controls.Add(this.gridViewCustomer);
             this.Controls.Add(this.listViewCustomer);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormCustomerList";
             this.Text = "FormCustomerList";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCustomer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,5 +224,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.DataGridView gridViewCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Active;
     }
 }

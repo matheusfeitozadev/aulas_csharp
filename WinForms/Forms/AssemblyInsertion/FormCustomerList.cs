@@ -13,16 +13,22 @@ namespace WinForms.Forms.AssemblyInsertion
 {
     public partial class FormCustomerList : Form
     {
+        private List<Customer> customers;
         public FormCustomerList()
         {
             InitializeComponent();
 
-            FillListView();
+            customers = Customer.GetList();
+
+            FillListView(customers);
+            FillGridView(customers);
         }
 
-        private void FillListView()
+        private void FillListView(List<Customer> list)
         {
-            var listViewItens = Customer.FillListView(Customer.GetList());
+            listViewCustomer.Items.Clear();
+
+            var listViewItens = Customer.FillListView(list);
 
             //listViewCustomer.Items.Add(new ListViewItem(new[] { "54", "Positivo", "True" }));
             //listViewCustomer.Items.Add(new ListViewItem(new[] { "54", "Samsung", "True" }));
@@ -41,6 +47,56 @@ namespace WinForms.Forms.AssemblyInsertion
             //nomes_list.Add("Wesley");
 
             //nomes_list.ToArray();
+        }
+
+        private void FillGridView(List<Customer> list)
+        {
+            gridViewCustomer.Rows.Clear();
+
+            foreach (var item in list)
+            {
+                gridViewCustomer.Rows.Add(new[] { item.Id.ToString(), item.CustomerName, item.Active.ToString() });
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtCustomer.Text))
+            {
+                //Contains = LIKE
+                var listTemp = customers.Where(x => 
+                    x.CustomerName.ToUpper().Contains(txtCustomer.Text.ToUpper().Trim()) && x.Active == ckbActive.Checked).ToList();
+
+                FillListView(listTemp);
+                FillGridView(listTemp);
+            }
+            else
+            {
+                var listTemp = customers.Where(x =>
+                    x.Active == ckbActive.Checked).ToList();
+
+                FillListView(listTemp);
+                FillGridView(listTemp);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            FillListView(customers);
+            FillGridView(customers);
+
+            txtCustomer.Clear();
+            ckbActive.Checked = false;
+        }
+
+        private void gridViewCustomer_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = gridViewCustomer.Rows[e.RowIndex];
+            var id = int.Parse(row.Cells[0].Value.ToString());
+
+            var customer = customers.Where(x => x.Id == id).FirstOrDefault();
+
+            new FormCustomerEdit(customer).ShowDialog();
         }
     }
 }

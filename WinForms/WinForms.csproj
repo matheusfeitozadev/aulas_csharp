@@ -69,6 +69,12 @@
     <Compile Include="Forms\AssemblyInsertion\FormCustomer.Designer.cs">
       <DependentUpon>FormCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AssemblyInsertion\FormCustomerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssemblyInsertion\FormCustomerEdit.Designer.cs">
+      <DependentUpon>FormCustomerEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AssemblyInsertion\FormCustomerList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AssemblyInsertion\FormCustomer.resx">
       <DependentUpon>FormCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AssemblyInsertion\FormCustomerEdit.resx">
+      <DependentUpon>FormCustomerEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AssemblyInsertion\FormCustomerList.resx">
       <DependentUpon>FormCustomerList.cs</DependentUpon>
