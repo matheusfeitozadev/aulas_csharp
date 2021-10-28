@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinForms.Classes;
 using WinForms.Forms.Atividade3;
 
 namespace WinForms.Forms.AssemblyInsertion

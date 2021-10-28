@@ -9,17 +9,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinForms.Classes.Entity;
 
 namespace WinForms.Forms.AssemblyInsertion
 {
     public partial class FormCustomer : Form
     {
-        private List<Customer> customers;
+        private List<CustomerViewModel> customers;
+        private EntityCustomer entityCustomer;
         public FormCustomer()
         {
             InitializeComponent();
 
-            customers = Customer.GetList();
+            entityCustomer = new EntityCustomer();
+
+            customers = entityCustomer.List();
 
             ckbActive.Checked = true;
         }
@@ -28,7 +32,7 @@ namespace WinForms.Forms.AssemblyInsertion
         {
             bool isOK = true;
 
-            var customer = new Customer(txtCustomer.Text.ToUpper(), true);
+            var customer = new CustomerViewModel(txtCustomer.Text.ToUpper(), true);
 
             var message = customer.CheckInformation();
 
@@ -80,7 +84,7 @@ namespace WinForms.Forms.AssemblyInsertion
 
         private void LinkCSharp()
         {
-            var obj = new Customer();
+            var obj = new CustomerViewModel();
             obj.Id = 54;
             obj.CustomerName = "POSITIVO";
             obj.Active = true;

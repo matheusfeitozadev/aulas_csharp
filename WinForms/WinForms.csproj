@@ -33,8 +33,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +67,27 @@
     <Compile Include="Classes\Assembly\Factory.cs" />
     <Compile Include="Classes\Assembly\Interfaces\GenericInterface.cs" />
     <Compile Include="Classes\Assembly\Property.cs" />
+    <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\DAO.cs" />
+    <Compile Include="Classes\Entity\Customer.cs">
+      <DependentUpon>ModelCursoDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Entity\EntityCustomer.cs" />
+    <Compile Include="Classes\Entity\ModelCursoDEV.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCursoDEV.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Entity\ModelCursoDEV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCursoDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Entity\ModelCursoDEV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCursoDEV.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Enum\LblStatusEnum.cs" />
     <Compile Include="Classes\Usuario.cs" />
     <Compile Include="Classes\Utilities.cs" />
@@ -128,6 +162,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="Classes\Entity\ModelCursoDEV.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCursoDEV.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Classes\Entity\ModelCursoDEV.edmx.diagram">
+      <DependentUpon>ModelCursoDEV.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,6 +182,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Classes\Entity\ModelCursoDEV.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelCursoDEV.Context.cs</LastGenOutput>
+      <DependentUpon>ModelCursoDEV.edmx</DependentUpon>
+    </Content>
+    <Content Include="Classes\Entity\ModelCursoDEV.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCursoDEV.edmx</DependentUpon>
+      <LastGenOutput>ModelCursoDEV.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

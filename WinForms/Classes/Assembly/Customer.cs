@@ -5,19 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinForms.Classes.Entity;
 
 namespace LogicaProgramacao.Classes.Assembly
 {
-    public class Customer : ClassBase, GenericInterface<Customer>
+    public class CustomerViewModel : ClassBase, GenericInterface<CustomerViewModel>
     {
         public string CustomerName { get; set; }
 
-        public Customer()
+        public CustomerViewModel()
         {
 
         }
 
-        public Customer(string customer, bool active)
+        public CustomerViewModel(string customer, bool active)
         {
             CustomerName = customer;
             Active = active;
@@ -36,25 +37,25 @@ namespace LogicaProgramacao.Classes.Assembly
         }
 
 
-        public static List<Customer> GetList()
+        public static List<CustomerViewModel> GetList()
         {
-            List<Customer> customers = new List<Customer>();
+            List<CustomerViewModel> customers = new List<CustomerViewModel>();
 
-            customers.Add(new Customer()
+            customers.Add(new CustomerViewModel()
             {
                 Id = 54,
                 CustomerName = "POSITIVO",
                 Active = true
             });
 
-            customers.Add(new Customer()
+            customers.Add(new CustomerViewModel()
             {
                 Id = 42,
                 CustomerName = "SAMSUNG",
                 Active = true
             });
 
-            customers.Add(new Customer()
+            customers.Add(new CustomerViewModel()
             {
                 Id = 65,
                 CustomerName = "JCH",
@@ -64,7 +65,7 @@ namespace LogicaProgramacao.Classes.Assembly
             return customers;
         }
 
-        public static ListViewItem[] FillListView(List<Customer> customers)
+        public static ListViewItem[] FillListView(List<CustomerViewModel> customers)
         {
             List<ListViewItem> list = new List<ListViewItem>();
 
@@ -84,26 +85,14 @@ namespace LogicaProgramacao.Classes.Assembly
             return list.ToArray();
         }
 
-        
-
-        public void Add(Customer model)
+        public static CustomerViewModel ReturnClassBase(Customer customer)
         {
-            throw new NotImplementedException();
-        }
+            var model = new CustomerViewModel();
+            model.Id = customer.Id;
+            model.CustomerName = customer.CustomerName;
+            model.Active = customer.Active;
 
-        public void Delete(Customer Id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Customer> List()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Customer model)
-        {
-            throw new NotImplementedException();
+            return model;
         }
     }
 }

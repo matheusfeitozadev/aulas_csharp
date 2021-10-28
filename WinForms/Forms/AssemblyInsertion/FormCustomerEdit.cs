@@ -13,8 +13,8 @@ namespace WinForms.Forms.AssemblyInsertion
 {
     public partial class FormCustomerEdit : Form
     {
-        private Customer Customer;
-        public FormCustomerEdit(Customer customer)
+        private CustomerViewModel Customer;
+        public FormCustomerEdit(CustomerViewModel customer)
         {
             InitializeComponent();
 
@@ -31,7 +31,7 @@ namespace WinForms.Forms.AssemblyInsertion
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            var customers = new List<Customer>();
+            var customers = new List<CustomerViewModel>();
             var customer = customers.Where(x => x.Id == Customer.Id).FirstOrDefault();
 
             customer.CustomerName = txtCustomer.Text;

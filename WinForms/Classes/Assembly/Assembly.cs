@@ -10,7 +10,7 @@ namespace LogicaProgramacao.Classes.Assembly
     {
         public string AssemblyName { get; set; }
         public Factory Factory { get; set; }
-        public Customer Customer { get; set; }
+        public CustomerViewModel Customer { get; set; }
         public List<Property> Properties { get; set; }
 
         public Assembly()

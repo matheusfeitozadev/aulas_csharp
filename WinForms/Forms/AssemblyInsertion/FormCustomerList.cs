@@ -8,27 +8,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinForms.Classes.Entity;
 
 namespace WinForms.Forms.AssemblyInsertion
 {
     public partial class FormCustomerList : Form
     {
-        private List<Customer> customers;
+        private List<CustomerViewModel> customers;
+        private EntityCustomer entityCustomer;
         public FormCustomerList()
         {
             InitializeComponent();
 
-            customers = Customer.GetList();
+            entityCustomer = new EntityCustomer();
+
+            customers = entityCustomer.List();
 
             FillListView(customers);
             FillGridView(customers);
         }
 
-        private void FillListView(List<Customer> list)
+        private void FillListView(List<CustomerViewModel> list)
         {
             listViewCustomer.Items.Clear();
 
-            var listViewItens = Customer.FillListView(list);
+            var listViewItens = CustomerViewModel.FillListView(list);
 
             //listViewCustomer.Items.Add(new ListViewItem(new[] { "54", "Positivo", "True" }));
             //listViewCustomer.Items.Add(new ListViewItem(new[] { "54", "Samsung", "True" }));
@@ -49,7 +53,7 @@ namespace WinForms.Forms.AssemblyInsertion
             //nomes_list.ToArray();
         }
 
-        private void FillGridView(List<Customer> list)
+        private void FillGridView(List<CustomerViewModel> list)
         {
             gridViewCustomer.Rows.Clear();
 
