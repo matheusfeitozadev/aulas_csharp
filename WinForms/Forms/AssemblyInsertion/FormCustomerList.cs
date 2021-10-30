@@ -115,5 +115,10 @@ namespace WinForms.Forms.AssemblyInsertion
             }
            
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

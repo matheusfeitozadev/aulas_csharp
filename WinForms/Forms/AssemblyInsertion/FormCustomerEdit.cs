@@ -40,15 +40,26 @@ namespace WinForms.Forms.AssemblyInsertion
 
             entityCustomer.Update(CustomerModel);
 
-            MessageBox.Show("Registro atualizado!");
-
-            Close();
-
+            ShowMessageAndClose("Registro atualizado!");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Deseja remover esse registro?", "Alerta", MessageBoxButtons.YesNo);
 
+            if(dialogResult == DialogResult.Yes)
+            {
+                entityCustomer.Delete(CustomerModel.Id);
+
+                ShowMessageAndClose("Registro removido!");
+            }
+        }
+
+        private void ShowMessageAndClose(string message)
+        {
+            MessageBox.Show(message);
+
+            Close();
         }
     }
 }

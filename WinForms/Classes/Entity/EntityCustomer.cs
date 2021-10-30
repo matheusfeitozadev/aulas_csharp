@@ -12,7 +12,15 @@ namespace WinForms.Classes.Entity
     {
         public void Add(CustomerViewModel model)
         {
-            throw new NotImplementedException();
+            var context = new CursoDEVEntities();
+
+            Customer customer = new Customer();
+            customer.CustomerName = model.CustomerName;
+            customer.Active = model.Active;
+
+            customer = context.Customers.Add(customer);
+
+            context.SaveChanges();
         }
 
         public void Delete(int Id)
@@ -63,6 +71,13 @@ namespace WinForms.Classes.Entity
             context.Customers.RemoveRange(list);
 
             context.SaveChanges();
+        }
+
+        public bool Exists(CustomerViewModel customerViewModel)
+        {
+            var context = new CursoDEVEntities();
+
+            return context.Customers.Any(x => x.CustomerName.ToUpper().Equals(customerViewModel.CustomerName.Trim().ToUpper()));
         }
     }
 }

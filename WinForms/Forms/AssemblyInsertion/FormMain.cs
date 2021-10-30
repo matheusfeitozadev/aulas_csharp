@@ -44,5 +44,15 @@ namespace WinForms.Forms.AssemblyInsertion
             var form = new FormCustomerList();
             showForm(form);
         }
+
+        private void listToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            //form listar factory
+        }
+
+        private void addToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            //form add factory
+        }
     }
 }

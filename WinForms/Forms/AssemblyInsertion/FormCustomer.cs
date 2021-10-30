@@ -44,12 +44,12 @@ namespace WinForms.Forms.AssemblyInsertion
             }
             else
             {
-                //verificar se o cliente já existe na lista
-                var exists = customers.Where(x => x.CustomerName.ToUpper().Equals(customer.CustomerName)).FirstOrDefault();
+                //verificar se o cliente já existe no banco
+                var exists = entityCustomer.Exists(customer);
 
-                if(exists != null)
+                if (exists)
                 {
-                    MessageBox.Show("This Customer already exists!");
+                    MessageBox.Show("This Customer already exists in database!");
                     isOK = false;
                 }
             }
@@ -57,7 +57,7 @@ namespace WinForms.Forms.AssemblyInsertion
             if(isOK)
             {
                 //Enviar para o banco de dados...
-                customers.Add(customer);
+                entityCustomer.Add(customer);
 
                 ClearInformation();
             }
