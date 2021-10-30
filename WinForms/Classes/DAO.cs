@@ -54,9 +54,14 @@ namespace WinForms.Classes
 
         public void FirstExampleUsingEntity()
         {
-            var context = new CursoDEVContext();
+            var context = new CursoDEVEntities();
+
+            //select* from Customer where Active = 1
+            //order by Id desc
 
             var list = context.Customers.ToList();
+
+            var listActives = context.Customers.Where(x => x.Active == true).OrderByDescending(x=> x.Id).ToList();
         }
     }
 }

@@ -70,23 +70,23 @@
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\DAO.cs" />
     <Compile Include="Classes\Entity\Customer.cs">
-      <DependentUpon>ModelCursoDEV.tt</DependentUpon>
+      <DependentUpon>ModelAssembly.tt</DependentUpon>
     </Compile>
     <Compile Include="Classes\Entity\EntityCustomer.cs" />
-    <Compile Include="Classes\Entity\ModelCursoDEV.Context.cs">
+    <Compile Include="Classes\Entity\ModelAssembly.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelCursoDEV.Context.tt</DependentUpon>
+      <DependentUpon>ModelAssembly.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Entity\ModelCursoDEV.cs">
+    <Compile Include="Classes\Entity\ModelAssembly.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelCursoDEV.tt</DependentUpon>
+      <DependentUpon>ModelAssembly.tt</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Entity\ModelCursoDEV.Designer.cs">
+    <Compile Include="Classes\Entity\ModelAssembly.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelCursoDEV.edmx</DependentUpon>
+      <DependentUpon>ModelAssembly.edmx</DependentUpon>
     </Compile>
     <Compile Include="Classes\Enum\LblStatusEnum.cs" />
     <Compile Include="Classes\Usuario.cs" />
@@ -162,12 +162,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Classes\Entity\ModelCursoDEV.edmx">
+    <EntityDeploy Include="Classes\Entity\ModelAssembly.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelCursoDEV.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelAssembly.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Classes\Entity\ModelCursoDEV.edmx.diagram">
-      <DependentUpon>ModelCursoDEV.edmx</DependentUpon>
+    <None Include="Classes\Entity\ModelAssembly.edmx.diagram">
+      <DependentUpon>ModelAssembly.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -184,19 +184,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Classes\Entity\ModelCursoDEV.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelCursoDEV.Context.cs</LastGenOutput>
-      <DependentUpon>ModelCursoDEV.edmx</DependentUpon>
-    </Content>
-    <Content Include="Classes\Entity\ModelCursoDEV.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelCursoDEV.edmx</DependentUpon>
-      <LastGenOutput>ModelCursoDEV.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Classes\Entity\ModelAssembly.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelAssembly.edmx</DependentUpon>
+      <LastGenOutput>ModelAssembly.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Classes\Entity\ModelAssembly.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelAssembly.edmx</DependentUpon>
+      <LastGenOutput>ModelAssembly.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

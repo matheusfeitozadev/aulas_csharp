@@ -8,36 +8,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinForms.Classes.Entity;
 
 namespace WinForms.Forms.AssemblyInsertion
 {
     public partial class FormCustomerEdit : Form
     {
-        private CustomerViewModel Customer;
+        private CustomerViewModel CustomerModel;
+        private EntityCustomer entityCustomer;
         public FormCustomerEdit(CustomerViewModel customer)
         {
             InitializeComponent();
 
-            Customer = customer;
+            entityCustomer = new EntityCustomer();
+
+            CustomerModel = customer;
 
             FillInformation();
         }
 
         private void FillInformation()
         {
-            txtCustomer.Text = Customer.CustomerName;
-            ckbActive.Checked = Customer.Active;
+            txtCustomer.Text = CustomerModel.CustomerName;
+            ckbActive.Checked = CustomerModel.Active;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            var customers = new List<CustomerViewModel>();
-            var customer = customers.Where(x => x.Id == Customer.Id).FirstOrDefault();
+            CustomerModel.CustomerName = txtCustomer.Text;
+            CustomerModel.Active = ckbActive.Checked;
 
-            customer.CustomerName = txtCustomer.Text;
-            customer.Active = ckbActive.Checked;
+            entityCustomer.Update(CustomerModel);
 
-            //commit
+            MessageBox.Show("Registro atualizado!");
+
+            Close();
 
         }
 

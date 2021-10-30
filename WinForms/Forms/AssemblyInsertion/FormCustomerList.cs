@@ -22,6 +22,11 @@ namespace WinForms.Forms.AssemblyInsertion
 
             entityCustomer = new EntityCustomer();
 
+            ReturnInformationFromDatabase();
+        }
+
+        private void ReturnInformationFromDatabase()
+        {
             customers = entityCustomer.List();
 
             FillListView(customers);
@@ -95,12 +100,20 @@ namespace WinForms.Forms.AssemblyInsertion
 
         private void gridViewCustomer_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = gridViewCustomer.Rows[e.RowIndex];
-            var id = int.Parse(row.Cells[0].Value.ToString());
+            try
+            {
+                DataGridViewRow row = gridViewCustomer.Rows[e.RowIndex];
+                var id = int.Parse(row.Cells[0].Value.ToString());
 
-            var customer = customers.Where(x => x.Id == id).FirstOrDefault();
+                var customer = customers.Where(x => x.Id == id).FirstOrDefault();
 
-            new FormCustomerEdit(customer).ShowDialog();
+                new FormCustomerEdit(customer).ShowDialog();
+            }
+            finally
+            {
+                ReturnInformationFromDatabase();
+            }
+           
         }
     }
 }

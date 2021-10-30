@@ -15,14 +15,21 @@ namespace WinForms.Classes.Entity
             throw new NotImplementedException();
         }
 
-        public void Delete(CustomerViewModel Id)
+        public void Delete(int Id)
         {
-            throw new NotImplementedException();
+            var context = new CursoDEVEntities();
+
+            var modelCustomer = context.Customers.Where(x => x.Id == Id).FirstOrDefault();
+
+            context.Customers.Remove(modelCustomer);
+
+            //commit
+            context.SaveChanges();
         }
 
         public List<CustomerViewModel> List()
         {
-            var context = new CursoDEVContext();
+            var context = new CursoDEVEntities();
             List<CustomerViewModel> listViewModel = new List<CustomerViewModel>();
 
             var list = context.Customers.ToList();
@@ -37,7 +44,25 @@ namespace WinForms.Classes.Entity
 
         public void Update(CustomerViewModel model)
         {
-            throw new NotImplementedException();
+            var context = new CursoDEVEntities();
+
+            var modelTemp = context.Customers.FirstOrDefault(x => x.Id == model.Id);
+
+            modelTemp.CustomerName = model.CustomerName;
+            modelTemp.Active = model.Active;
+
+            context.SaveChanges();
+        }
+
+        public void RemovelAllContainsCharS()
+        {
+            var context = new CursoDEVEntities();
+
+            var list = context.Customers.Where(x => x.CustomerName.ToUpper().Contains("S")).ToList();
+
+            context.Customers.RemoveRange(list);
+
+            context.SaveChanges();
         }
     }
 }

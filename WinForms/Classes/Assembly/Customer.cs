@@ -9,7 +9,7 @@ using WinForms.Classes.Entity;
 
 namespace LogicaProgramacao.Classes.Assembly
 {
-    public class CustomerViewModel : ClassBase, GenericInterface<CustomerViewModel>
+    public class CustomerViewModel : ClassBase
     {
         public string CustomerName { get; set; }
 

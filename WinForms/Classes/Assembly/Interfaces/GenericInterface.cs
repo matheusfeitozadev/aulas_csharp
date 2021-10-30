@@ -10,7 +10,7 @@ namespace LogicaProgramacao.Classes.Assembly.Interfaces
     {
         void Add(T model);
         void Update(T model);
-        void Delete(T Id);
+        void Delete(int Id);
         List<T> List();
     }
 }

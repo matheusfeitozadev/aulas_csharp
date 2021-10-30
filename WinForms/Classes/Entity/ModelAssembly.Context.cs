@@ -13,10 +13,10 @@ namespace WinForms.Classes.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CursoDEVContext : DbContext
+    public partial class CursoDEVEntities : DbContext
     {
-        public CursoDEVContext()
-            : base("name=CursoDEVContext")
+        public CursoDEVEntities()
+            : base("name=CursoDEVEntities")
         {
         }
     

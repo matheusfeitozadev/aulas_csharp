@@ -29,7 +29,7 @@
           <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Active" Type="Boolean" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="CursoDEVContext" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CursoDEVEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customers" EntityType="Self.Customer" />
         </EntityContainer>
       </Schema>
@@ -37,7 +37,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CursoDEVModelStoreContainer" CdmEntityContainer="CursoDEVContext">
+        <EntityContainerMapping StorageEntityContainer="CursoDEVModelStoreContainer" CdmEntityContainer="CursoDEVEntities">
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="CursoDEVModel.Customer">
               <MappingFragment StoreEntitySet="Customer">
