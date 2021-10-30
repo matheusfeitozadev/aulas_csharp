@@ -13,18 +13,18 @@ namespace WinForms.Forms.Atividade3
 {
     public partial class FormAtividade3 : Form
     {
-        private List<Assembly> assemblies;
+        private List<AssemblyViewModel> assemblies;
 
         public FormAtividade3()
         {
             InitializeComponent();
 
-            assemblies = new List<Assembly>();
+            assemblies = new List<AssemblyViewModel>();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var assembly = new Assembly(txtAssemblyName.Text);
+            var assembly = new AssemblyViewModel(txtAssemblyName.Text);
 
             if(!string.IsNullOrEmpty(assembly.AssemblyName))
             {
@@ -50,7 +50,7 @@ namespace WinForms.Forms.Atividade3
             }
         }
 
-        private bool CheckIfExistsInList(Assembly assembly)
+        private bool CheckIfExistsInList(AssemblyViewModel assembly)
         {
             foreach(var item in assemblies)
             {

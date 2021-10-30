@@ -6,31 +6,21 @@ using System.Threading.Tasks;
 
 namespace LogicaProgramacao.Classes.Assembly
 {
-    public class Assembly : ClassBase
+    public class AssemblyViewModel : ClassBase
     {
         public string AssemblyName { get; set; }
-        public Factory Factory { get; set; }
+        public FactoryViewModel Factory { get; set; }
         public CustomerViewModel Customer { get; set; }
         public List<Property> Properties { get; set; }
 
-        public Assembly()
+        public AssemblyViewModel()
         {
 
         }
 
-        public Assembly(string assemblyName)
+        public AssemblyViewModel(string assemblyName)
         {
             AssemblyName = assemblyName;
-        }
-
-        public void Add(Assembly model)
-        {
-
-        }
-
-        public void Update()
-        {
-
         }
     }
 

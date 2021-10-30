@@ -1,5 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CursoDEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Assembly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FK_Customer" Type="int" Nullable="false" />
+    <Property Name="FK_Factory" Type="int" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AssemblyProperties">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FK_Assembly" Type="int" Nullable="false" />
+    <Property Name="FK_Property" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="Customer">
     <Key>
       <PropertyRef Name="Id" />
@@ -8,7 +26,103 @@
     <Property Name="CustomerName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Active" Type="bit" Nullable="false" />
   </EntityType>
+  <EntityType Name="Factory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Property">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PropertyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PropertyValue" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Assembly_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Assembly" Type="Self.Assembly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Assembly">
+        <PropertyRef Name="FK_Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assembly_Factory">
+    <End Role="Factory" Type="Self.Factory" Multiplicity="1" />
+    <End Role="Assembly" Type="Self.Assembly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Assembly">
+        <PropertyRef Name="FK_Factory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssemblyProperties_Assembly">
+    <End Role="Assembly" Type="Self.Assembly" Multiplicity="1" />
+    <End Role="AssemblyProperties" Type="Self.AssemblyProperties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assembly">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssemblyProperties">
+        <PropertyRef Name="FK_Assembly" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssemblyProperties_Property">
+    <End Role="Property" Type="Self.Property" Multiplicity="1" />
+    <End Role="AssemblyProperties" Type="Self.AssemblyProperties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Property">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssemblyProperties">
+        <PropertyRef Name="FK_Property" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="CursoDEVModelStoreContainer">
+    <EntitySet Name="Assembly" EntityType="Self.Assembly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AssemblyProperties" EntityType="Self.AssemblyProperties" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Factory" EntityType="Self.Factory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Property" EntityType="Self.Property" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Assembly_Customer" Association="Self.FK_Assembly_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Assembly" EntitySet="Assembly" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assembly_Factory" Association="Self.FK_Assembly_Factory">
+      <End Role="Factory" EntitySet="Factory" />
+      <End Role="Assembly" EntitySet="Assembly" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssemblyProperties_Assembly" Association="Self.FK_AssemblyProperties_Assembly">
+      <End Role="Assembly" EntitySet="Assembly" />
+      <End Role="AssemblyProperties" EntitySet="AssemblyProperties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssemblyProperties_Property" Association="Self.FK_AssemblyProperties_Property">
+      <End Role="Property" EntitySet="Property" />
+      <End Role="AssemblyProperties" EntitySet="AssemblyProperties" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

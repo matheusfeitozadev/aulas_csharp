@@ -12,16 +12,16 @@ namespace WinForms.Classes.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Customer
+    public partial class Factory
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Customer()
+        public Factory()
         {
             this.Assemblies = new HashSet<Assembly>();
         }
     
         public int Id { get; set; }
-        public string CustomerName { get; set; }
+        public string Name { get; set; }
         public bool Active { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

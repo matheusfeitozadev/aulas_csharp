@@ -12,19 +12,23 @@ namespace WinForms.Classes.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Customer
+    public partial class Assembly
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Customer()
+        public Assembly()
         {
-            this.Assemblies = new HashSet<Assembly>();
+            this.AssemblyProperties = new HashSet<AssemblyProperty>();
         }
     
         public int Id { get; set; }
-        public string CustomerName { get; set; }
+        public string Name { get; set; }
+        public int FK_Customer { get; set; }
+        public int FK_Factory { get; set; }
         public bool Active { get; set; }
     
+        public virtual Customer Customer { get; set; }
+        public virtual Factory Factory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Assembly> Assemblies { get; set; }
+        public virtual ICollection<AssemblyProperty> AssemblyProperties { get; set; }
     }
 }

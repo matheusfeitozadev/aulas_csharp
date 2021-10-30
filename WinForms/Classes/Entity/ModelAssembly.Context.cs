@@ -25,6 +25,11 @@ namespace WinForms.Classes.Entity
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Assembly> Assemblies { get; set; }
+        public virtual DbSet<AssemblyProperty> AssemblyProperties { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Factory> Factories { get; set; }
+        public virtual DbSet<Property> Properties { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

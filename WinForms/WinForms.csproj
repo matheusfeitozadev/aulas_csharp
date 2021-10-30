@@ -67,12 +67,24 @@
     <Compile Include="Classes\Assembly\Factory.cs" />
     <Compile Include="Classes\Assembly\Interfaces\GenericInterface.cs" />
     <Compile Include="Classes\Assembly\Property.cs" />
+    <Compile Include="Classes\ComboBoxItem.cs" />
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\DAO.cs" />
+    <Compile Include="Classes\Entity\Assembly.cs">
+      <DependentUpon>ModelAssembly.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Entity\AssemblyProperty.cs">
+      <DependentUpon>ModelAssembly.tt</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Entity\Customer.cs">
       <DependentUpon>ModelAssembly.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Entity\EntityAssembly.cs" />
     <Compile Include="Classes\Entity\EntityCustomer.cs" />
+    <Compile Include="Classes\Entity\EntityFactory.cs" />
+    <Compile Include="Classes\Entity\Factory.cs">
+      <DependentUpon>ModelAssembly.tt</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Entity\ModelAssembly.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,6 +100,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelAssembly.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Entity\Property.cs">
+      <DependentUpon>ModelAssembly.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Entity\sysdiagram.cs">
+      <DependentUpon>ModelAssembly.tt</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Enum\LblStatusEnum.cs" />
     <Compile Include="Classes\Usuario.cs" />
     <Compile Include="Classes\Utilities.cs" />
@@ -96,6 +114,13 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AssemblyInsertion\FactoryModel.cs" />
+    <Compile Include="Forms\AssemblyInsertion\FormAssembly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssemblyInsertion\FormAssembly.Designer.cs">
+      <DependentUpon>FormAssembly.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AssemblyInsertion\FormCustomer.cs">
       <SubType>Form</SubType>
@@ -114,6 +139,24 @@
     </Compile>
     <Compile Include="Forms\AssemblyInsertion\FormCustomerList.Designer.cs">
       <DependentUpon>FormCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AssemblyInsertion\FormFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssemblyInsertion\FormFactory.Designer.cs">
+      <DependentUpon>FormFactory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AssemblyInsertion\FormFactoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssemblyInsertion\FormFactoryEdit.Designer.cs">
+      <DependentUpon>FormFactoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AssemblyInsertion\FormFactoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssemblyInsertion\FormFactoryList.Designer.cs">
+      <DependentUpon>FormFactoryList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AssemblyInsertion\FormMain.cs">
       <SubType>Form</SubType>
@@ -138,6 +181,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AssemblyInsertion\FormAssembly.resx">
+      <DependentUpon>FormAssembly.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AssemblyInsertion\FormCustomer.resx">
       <DependentUpon>FormCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +192,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AssemblyInsertion\FormCustomerList.resx">
       <DependentUpon>FormCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AssemblyInsertion\FormFactory.resx">
+      <DependentUpon>FormFactory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AssemblyInsertion\FormFactoryEdit.resx">
+      <DependentUpon>FormFactoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AssemblyInsertion\FormFactoryList.resx">
+      <DependentUpon>FormFactoryList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AssemblyInsertion\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

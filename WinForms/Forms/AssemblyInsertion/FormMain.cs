@@ -54,5 +54,11 @@ namespace WinForms.Forms.AssemblyInsertion
         {
             //form add factory
         }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormAssembly();
+            showForm(form);
+        }
     }
 }

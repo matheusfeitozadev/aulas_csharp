@@ -1,14 +1,136 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CursoDEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CursoDEVEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Assemblies" EntityType="CursoDEVModel.Assembly" />
+    <EntitySet Name="AssemblyProperties" EntityType="CursoDEVModel.AssemblyProperty" />
+    <EntitySet Name="Customers" EntityType="CursoDEVModel.Customer" />
+    <EntitySet Name="Factories" EntityType="CursoDEVModel.Factory" />
+    <EntitySet Name="Properties" EntityType="CursoDEVModel.Property" />
+    <EntitySet Name="sysdiagrams" EntityType="CursoDEVModel.sysdiagram" />
+    <AssociationSet Name="FK_Assembly_Customer" Association="CursoDEVModel.FK_Assembly_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Assembly" EntitySet="Assemblies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assembly_Factory" Association="CursoDEVModel.FK_Assembly_Factory">
+      <End Role="Factory" EntitySet="Factories" />
+      <End Role="Assembly" EntitySet="Assemblies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssemblyProperties_Assembly" Association="CursoDEVModel.FK_AssemblyProperties_Assembly">
+      <End Role="Assembly" EntitySet="Assemblies" />
+      <End Role="AssemblyProperty" EntitySet="AssemblyProperties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssemblyProperties_Property" Association="CursoDEVModel.FK_AssemblyProperties_Property">
+      <End Role="Property" EntitySet="Properties" />
+      <End Role="AssemblyProperty" EntitySet="AssemblyProperties" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Assembly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FK_Customer" Type="Int32" Nullable="false" />
+    <Property Name="FK_Factory" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Customer" Relationship="CursoDEVModel.FK_Assembly_Customer" FromRole="Assembly" ToRole="Customer" />
+    <NavigationProperty Name="Factory" Relationship="CursoDEVModel.FK_Assembly_Factory" FromRole="Assembly" ToRole="Factory" />
+    <NavigationProperty Name="AssemblyProperties" Relationship="CursoDEVModel.FK_AssemblyProperties_Assembly" FromRole="Assembly" ToRole="AssemblyProperty" />
+  </EntityType>
+  <EntityType Name="AssemblyProperty">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_Assembly" Type="Int32" Nullable="false" />
+    <Property Name="FK_Property" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Assembly" Relationship="CursoDEVModel.FK_AssemblyProperties_Assembly" FromRole="AssemblyProperty" ToRole="Assembly" />
+    <NavigationProperty Name="Property" Relationship="CursoDEVModel.FK_AssemblyProperties_Property" FromRole="AssemblyProperty" ToRole="Property" />
+  </EntityType>
   <EntityType Name="Customer">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustomerName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Assemblies" Relationship="CursoDEVModel.FK_Assembly_Customer" FromRole="Customer" ToRole="Assembly" />
   </EntityType>
-  <EntityContainer Name="CursoDEVEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Customers" EntityType="Self.Customer" />
-  </EntityContainer>
+  <EntityType Name="Factory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Assemblies" Relationship="CursoDEVModel.FK_Assembly_Factory" FromRole="Factory" ToRole="Assembly" />
+  </EntityType>
+  <EntityType Name="Property">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PropertyValue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AssemblyProperties" Relationship="CursoDEVModel.FK_AssemblyProperties_Property" FromRole="Property" ToRole="AssemblyProperty" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Assembly_Customer">
+    <End Type="CursoDEVModel.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="CursoDEVModel.Assembly" Role="Assembly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Assembly">
+        <PropertyRef Name="FK_Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assembly_Factory">
+    <End Type="CursoDEVModel.Factory" Role="Factory" Multiplicity="1" />
+    <End Type="CursoDEVModel.Assembly" Role="Assembly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Assembly">
+        <PropertyRef Name="FK_Factory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssemblyProperties_Assembly">
+    <End Type="CursoDEVModel.Assembly" Role="Assembly" Multiplicity="1" />
+    <End Type="CursoDEVModel.AssemblyProperty" Role="AssemblyProperty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assembly">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssemblyProperty">
+        <PropertyRef Name="FK_Assembly" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssemblyProperties_Property">
+    <End Type="CursoDEVModel.Property" Role="Property" Multiplicity="1" />
+    <End Type="CursoDEVModel.AssemblyProperty" Role="AssemblyProperty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Property">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssemblyProperty">
+        <PropertyRef Name="FK_Property" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

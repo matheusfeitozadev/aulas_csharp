@@ -18,6 +18,11 @@ namespace LogicaProgramacao.Classes.Assembly
 
         }
 
+        public CustomerViewModel(int id)
+        {
+            Id = id;
+        }
+
         public CustomerViewModel(string customer, bool active)
         {
             CustomerName = customer;
