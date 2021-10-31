@@ -15,6 +15,7 @@
     <EntitySetMapping Name="AssemblyProperties">
       <EntityTypeMapping TypeName="CursoDEVModel.AssemblyProperty">
         <MappingFragment StoreEntitySet="AssemblyProperties">
+          <ScalarProperty Name="PropertyValue" ColumnName="PropertyValue" />
           <ScalarProperty Name="FK_Property" ColumnName="FK_Property" />
           <ScalarProperty Name="FK_Assembly" ColumnName="FK_Assembly" />
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -43,7 +44,6 @@
       <EntityTypeMapping TypeName="CursoDEVModel.Property">
         <MappingFragment StoreEntitySet="Property">
           <ScalarProperty Name="Active" ColumnName="Active" />
-          <ScalarProperty Name="PropertyValue" ColumnName="PropertyValue" />
           <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>

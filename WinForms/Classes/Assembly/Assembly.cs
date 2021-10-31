@@ -11,7 +11,7 @@ namespace LogicaProgramacao.Classes.Assembly
         public string AssemblyName { get; set; }
         public FactoryViewModel Factory { get; set; }
         public CustomerViewModel Customer { get; set; }
-        public List<Property> Properties { get; set; }
+        public List<PropertyViewModel> Properties { get; set; }
 
         public AssemblyViewModel()
         {

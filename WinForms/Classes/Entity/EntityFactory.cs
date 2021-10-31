@@ -10,7 +10,7 @@ namespace WinForms.Classes.Entity
 {
     public class EntityFactory : GenericInterface<FactoryViewModel>
     {
-        public void Add(FactoryViewModel model)
+        public int Add(FactoryViewModel model)
         {
             var context = new CursoDEVEntities();
 
@@ -21,6 +21,8 @@ namespace WinForms.Classes.Entity
             factory = context.Factories.Add(factory);
 
             context.SaveChanges();
+
+            return factory.Id;
         }
 
         public void Delete(int Id)

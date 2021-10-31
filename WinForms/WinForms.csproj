@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Assembly\Assembly.cs" />
+    <Compile Include="Classes\Assembly\AssemblyPropertyViewModel.cs" />
     <Compile Include="Classes\Assembly\Boxe.cs" />
     <Compile Include="Classes\Assembly\ClassBase.cs" />
     <Compile Include="Classes\Assembly\Customer.cs" />
@@ -80,8 +81,10 @@
       <DependentUpon>ModelAssembly.tt</DependentUpon>
     </Compile>
     <Compile Include="Classes\Entity\EntityAssembly.cs" />
+    <Compile Include="Classes\Entity\EntityAssemblyProperties.cs" />
     <Compile Include="Classes\Entity\EntityCustomer.cs" />
     <Compile Include="Classes\Entity\EntityFactory.cs" />
+    <Compile Include="Classes\Entity\EntityProperty.cs" />
     <Compile Include="Classes\Entity\Factory.cs">
       <DependentUpon>ModelAssembly.tt</DependentUpon>
     </Compile>

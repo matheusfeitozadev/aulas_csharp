@@ -10,7 +10,7 @@ namespace WinForms.Classes.Entity
 {
     public class EntityCustomer : GenericInterface<CustomerViewModel>
     {
-        public void Add(CustomerViewModel model)
+        public int Add(CustomerViewModel model)
         {
             var context = new CursoDEVEntities();
 
@@ -21,6 +21,8 @@ namespace WinForms.Classes.Entity
             customer = context.Customers.Add(customer);
 
             context.SaveChanges();
+
+            return customer.Id;
         }
 
         public void Delete(int Id)

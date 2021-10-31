@@ -22,7 +22,6 @@ namespace WinForms.Classes.Entity
     
         public int Id { get; set; }
         public string PropertyName { get; set; }
-        public string PropertyValue { get; set; }
         public bool Active { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

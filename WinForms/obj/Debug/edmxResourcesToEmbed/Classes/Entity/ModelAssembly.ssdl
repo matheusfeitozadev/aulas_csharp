@@ -17,6 +17,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FK_Assembly" Type="int" Nullable="false" />
     <Property Name="FK_Property" Type="int" Nullable="false" />
+    <Property Name="PropertyValue" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Customer">
     <Key>
@@ -40,7 +41,6 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="PropertyName" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="PropertyValue" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Active" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">

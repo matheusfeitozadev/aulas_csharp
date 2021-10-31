@@ -10,7 +10,7 @@ namespace WinForms.Classes.Entity
 {
     public class EntityAssembly : GenericInterface<AssemblyViewModel>
     {
-        public void Add(AssemblyViewModel model)
+        public int Add(AssemblyViewModel model)
         {
             var context = new CursoDEVEntities();
 
@@ -20,10 +20,11 @@ namespace WinForms.Classes.Entity
             assembly.FK_Factory = model.Factory.Id;
             assembly.FK_Customer = model.Customer.Id;
 
-            context.Assemblies.Add(assembly);
+            assembly = context.Assemblies.Add(assembly);
 
             context.SaveChanges();
 
+            return assembly.Id;
         }
 
         public void Delete(int Id)

@@ -8,7 +8,7 @@ namespace LogicaProgramacao.Classes.Assembly.Interfaces
 {
     public interface GenericInterface<T> where T: class
     {
-        void Add(T model);
+        int Add(T model);
         void Update(T model);
         void Delete(int Id);
         List<T> List();

@@ -22,6 +22,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Assembly" Type="int" Nullable="false" />
           <Property Name="FK_Property" Type="int" Nullable="false" />
+          <Property Name="PropertyValue" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
@@ -45,7 +46,6 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PropertyName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="PropertyValue" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Active" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -178,6 +178,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FK_Assembly" Type="Int32" Nullable="false" />
           <Property Name="FK_Property" Type="Int32" Nullable="false" />
+          <Property Name="PropertyValue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Assembly" Relationship="CursoDEVModel.FK_AssemblyProperties_Assembly" FromRole="AssemblyProperty" ToRole="Assembly" />
           <NavigationProperty Name="Property" Relationship="CursoDEVModel.FK_AssemblyProperties_Property" FromRole="AssemblyProperty" ToRole="Property" />
         </EntityType>
@@ -205,7 +206,6 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="PropertyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="PropertyValue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Active" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="AssemblyProperties" Relationship="CursoDEVModel.FK_AssemblyProperties_Property" FromRole="Property" ToRole="AssemblyProperty" />
         </EntityType>
@@ -267,7 +267,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -287,6 +287,7 @@
           <EntitySetMapping Name="AssemblyProperties">
             <EntityTypeMapping TypeName="CursoDEVModel.AssemblyProperty">
               <MappingFragment StoreEntitySet="AssemblyProperties">
+                <ScalarProperty Name="PropertyValue" ColumnName="PropertyValue" />
                 <ScalarProperty Name="FK_Property" ColumnName="FK_Property" />
                 <ScalarProperty Name="FK_Assembly" ColumnName="FK_Assembly" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
@@ -315,7 +316,6 @@
             <EntityTypeMapping TypeName="CursoDEVModel.Property">
               <MappingFragment StoreEntitySet="Property">
                 <ScalarProperty Name="Active" ColumnName="Active" />
-                <ScalarProperty Name="PropertyValue" ColumnName="PropertyValue" />
                 <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

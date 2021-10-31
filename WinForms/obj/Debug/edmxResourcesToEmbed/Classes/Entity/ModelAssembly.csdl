@@ -44,6 +44,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FK_Assembly" Type="Int32" Nullable="false" />
     <Property Name="FK_Property" Type="Int32" Nullable="false" />
+    <Property Name="PropertyValue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Assembly" Relationship="CursoDEVModel.FK_AssemblyProperties_Assembly" FromRole="AssemblyProperty" ToRole="Assembly" />
     <NavigationProperty Name="Property" Relationship="CursoDEVModel.FK_AssemblyProperties_Property" FromRole="AssemblyProperty" ToRole="Property" />
   </EntityType>
@@ -71,7 +72,6 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="PropertyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="PropertyValue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Active" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="AssemblyProperties" Relationship="CursoDEVModel.FK_AssemblyProperties_Property" FromRole="Property" ToRole="AssemblyProperty" />
   </EntityType>
