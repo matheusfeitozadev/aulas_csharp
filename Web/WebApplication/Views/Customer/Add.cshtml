@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Adicionar novo cliente</h2>
+
+<div class="row">
+    <form action="@Url.Action("Post", "Customer")" method="post">
+        <div class="col-sm-3">
+            <label>Customer Name</label>
+        </div>
+    </form>
+</div>
+
