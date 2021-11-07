@@ -53,6 +53,18 @@ namespace WinForms.Classes.Entity
             return listViewModel;
         }
 
+        public CustomerViewModel GetById(int Id)
+        {
+            var context = new CursoDEVContext();
+            CustomerViewModel model = new CustomerViewModel();
+
+            var customer = context.Customers.FirstOrDefault(x => x.Id == Id);
+
+            model = CustomerViewModel.ReturnClassBase(customer);
+
+            return model;
+        }
+
         public void Update(CustomerViewModel model)
         {
             var context = new CursoDEVContext();
