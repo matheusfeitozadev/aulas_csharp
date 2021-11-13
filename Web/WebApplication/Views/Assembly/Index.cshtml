@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+
+    var factories = (List<LogicaProgramacao.Classes.Assembly.FactoryViewModel>)ViewBag.Factories;
+    var customers = (List<LogicaProgramacao.Classes.Assembly.CustomerViewModel>)ViewBag.Customers;
+    var properties = (List<LogicaProgramacao.Classes.Assembly.PropertyViewModel>)ViewBag.Properties;
+}
+
+<script src="@Url.Content("~/static/scripts/Assembly.js?v=2.9")"></script>
+
+<div class="row">
+    <div class="col-sm-4">
+        <h3>Adicionar Assembly</h3>
+    </div>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-sm-3">
+        <label>Assembly Name</label>
+        <input id="txtAssemblyName" type="text" class="form-control" />
+    </div>
+    <div class="col-sm-3">
+        <label>Factory</label>
+        <select id="selectFactory" class="form-control">
+            <option value="0">Selecione</option>
+            @foreach (var item in factories)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+    </div>
+    <div class="col-sm-3">
+        <label>Customer</label>
+        <select id="selectCustomer" class="form-control">
+            <option value="0">Selecione</option>
+            @foreach (var item in customers)
+            {
+                <option value="@item.Id">@item.CustomerName</option>
+            }
+        </select>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-sm-3">
+        <h4>Properties</h4>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-sm-3">
+        <label>Property Name</label>
+        <select class="form-control" id="selectProperty">
+            <option value="0">Selecione</option>
+            @foreach (var item in properties)
+            {
+                <option value="@item.Id">@item.PropertyName</option>
+            }
+        </select>
+    </div>
+    <div class="col-sm-3">
+        <label>Property Value</label>
+        <input type="text" class="form-control" id="txtPropertyValue" />
+    </div>
+    <div class="col-sm-3">
+        <button id="btnAdd" class="btn btn-primary">Add <i class="fas fa-plus-square"></i></button>
+        <button class="btn btn-info">Voltar <i class="fas fa-plus-square"></i></button>
+        <button id="btnSave" class="btn btn-success">Salvar <i class="fas fa-plus-square"></i></button>
+    </div>
+
+</div>
+<br />
+<div class="row">
+    <div class="col-sm-6">
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th>Property Name</th>
+                    <th>Property Value</th>
+                    <th>Delete</th>
+                    <th hidden>Id</th>
+                </tr>
+            </thead>
+            <tbody id="bodyTable">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<form hidden id="form" action="@Url.Action("SaveInfo", "Assembly")" method="post">
+    <input id="jsonObject" name="json"/>
+</form>
