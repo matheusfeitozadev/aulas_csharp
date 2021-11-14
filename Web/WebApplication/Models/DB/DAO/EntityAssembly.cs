@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebApplication.Models.DB;
+using WinForms.Classes.Assembly;
 
 namespace WinForms.Classes.Entity
 {
@@ -35,7 +36,32 @@ namespace WinForms.Classes.Entity
 
         public List<AssemblyViewModel> List()
         {
-            throw new NotImplementedException();
+            List<AssemblyViewModel> listModel = new List<AssemblyViewModel>();
+            var context = new CursoDEVContext();
+
+            var list = context.Assemblies.ToList();
+
+            foreach(var item in list)
+            {
+                AssemblyViewModel itemAssembly = new AssemblyViewModel();
+                itemAssembly.Id = item.Id;
+                itemAssembly.AssemblyName = item.Name;
+                itemAssembly.Factory = FactoryViewModel.ReturnClassBase(item.Factory);
+                itemAssembly.Customer = CustomerViewModel.ReturnClassBase(item.Customer);
+                itemAssembly.Properties = new List<AssemblyPropertyViewModel>();
+
+                foreach (var itemProp in item.AssemblyProperties)
+                {
+                    itemAssembly.Properties.Add(new AssemblyPropertyViewModel()
+                    {
+                        Id = itemProp.Id
+                    });
+                }
+
+                listModel.Add(itemAssembly);
+            }
+
+            return listModel;
         }
 
         public void Update(AssemblyViewModel model)

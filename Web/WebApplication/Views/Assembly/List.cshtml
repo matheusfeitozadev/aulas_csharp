@@ -1,0 +1,48 @@
+﻿
+@model List<LogicaProgramacao.Classes.Assembly.AssemblyViewModel>
+
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+
+    ViewBag.Title = "List Assembly";
+}
+
+<div class="row">
+    <div class="col-sm-1">
+        <a href="@Url.Action("New", "Assembly")" class="btn btn-primary">Adicionar Novo</a>
+    </div>
+    <div class="col-sm-1">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-info">Voltar</a>
+    </div>
+
+</div>
+
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Assembly Name</th>
+                <th>Factory</th>
+                <th>Customer</th>
+                <th>Qtd Properties</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.AssemblyName</td>
+                        <td>@item.Factory.Name</td>
+                        <td>@item.Customer.CustomerName</td>
+                        <td>@item.Properties.Count.ToString()</td>
+                        <td>@item.Active.ToString()</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

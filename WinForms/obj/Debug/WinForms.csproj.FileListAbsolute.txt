@@ -23,3 +23,6 @@ D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\obj\Debug\WinFor
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\obj\Debug\WinForms.csproj.CopyComplete
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\obj\Debug\WinForms.exe
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\obj\Debug\WinForms.pdb
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\obj\Debug\WinForms.csprojAssemblyReference.cache
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\bin\Debug\Newtonsoft.Json.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WinForms\bin\Debug\Newtonsoft.Json.xml

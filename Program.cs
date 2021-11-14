@@ -18,7 +18,7 @@ namespace LogicaProgramacao
 
         //APP01 -> Enviam email de relatório -> Mac Control(Consumo de MAC, )
 
-        // Task Schedule(APP01) -> 3 itens (Console application)
+        // Task Schedule(APP01) -> 3 itens (Console application) OLE
 
         //Parser Samsung ARD3 -> Console Application
 
@@ -45,7 +45,7 @@ namespace LogicaProgramacao
 
             #region Parte 1
 
-            //executeVerification();
+            executeVerification();
 
             #endregion
 
@@ -73,18 +73,18 @@ namespace LogicaProgramacao
 
             //int tentativas = 0;
 
-            //for (int i = 0; i < 5; i++)
+            //for (int i = 0; i < 3; i++)
             //{
             //    Console.WriteLine("Quantidade de execução: " + i.ToString() + "\n");
 
             //    var isAuthenticated = executeVerification();
 
-            //    if(!isAuthenticated)
+            //    if (!isAuthenticated)
             //    {
             //        tentativas++;
             //    }
 
-            //    if(tentativas == 3)
+            //    if (tentativas == 3)
             //    {
             //        Console.WriteLine("Você atingiu o número de tentativas!");
             //        Console.ReadLine();
@@ -155,12 +155,12 @@ namespace LogicaProgramacao
 
             //List<string> nomes = new List<string>();
             //List<int> indexs = new List<int>();
-            ////List<int> idades = new List<int>();
+            //List<int> idades = new List<int>();
 
-            ////int[] idades_array = new int[10];
-            ////idades_array[0] = 26;
+            //int[] idades_array = new int[10];
+            //idades_array[0] = 26;
 
-            //foreach(var index in indexs)
+            //foreach (var index in indexs)
             //{
             //    nomes.RemoveAt(index);
             //}
@@ -172,7 +172,7 @@ namespace LogicaProgramacao
             //nomes.Add("Joao");
             //nomes.Add("Elizandro");
 
-            ////nomes.Remove("Kevin");
+            //nomes.Remove("Kevin");
             //nomes.RemoveAt(1);
             //nomes.RemoveRange(1, 4);
 
@@ -187,6 +187,7 @@ namespace LogicaProgramacao
             #region Switch Case
 
             //bool isAuthenticated = false;
+            //string value = "";
 
             //if (isAuthenticated == true)
             //{
@@ -197,7 +198,24 @@ namespace LogicaProgramacao
             //    Console.WriteLine("Você NAO está logado!");
             //}
 
-            //switch(isAuthenticated)
+            //switch (value)
+            //{
+            //    case "A":
+            //        Console.WriteLine("Letra A!");
+
+            //        break;
+
+            //    case "B":
+            //        Console.WriteLine("Letra B!");
+
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("Qualquer outra Letra!");
+            //        break;
+            //}
+
+            //switch (isAuthenticated)
             //{
             //    case true:
             //        Console.WriteLine("Você está logado!");
@@ -209,7 +227,7 @@ namespace LogicaProgramacao
 
             //        break;
 
-            //   default:
+            //    default:
             //        Console.WriteLine("Valor inválido!");
             //        break;
             //}
@@ -218,14 +236,14 @@ namespace LogicaProgramacao
 
             #region Conversão de valores
 
-            //string idadeStr = "true";
+            //string idadeStr = "1";
             //int number = 0;
             //bool isOK = false;
             //float real = 10.100f;
 
             //number = int.Parse(idadeStr);
 
-            //if (number <= 18)
+            //if (number < 18)
             //{
             //    Console.WriteLine("Menor de idade!");
             //}
@@ -252,16 +270,16 @@ namespace LogicaProgramacao
 
             #region Operadores matematicos
 
-            //++ -- += -= *= /=
+            //++ -- +=10 -=10 *=2 /=2
 
-            int number1 = 10;
-            int number2 = 20;
-            int total = 0;
+            //int number1 = 10;
+            //int number2 = 20;
+            //int total = 0;
 
-            total += number1 + number2;
-            total *= number1 * number2;
+            //total += number1 + number2;
+            //total *= number1 * number2;
             //total /= number1 / number2;
-            total += number1 % number2;
+            //total += number1 % number2;
 
 
             #endregion
@@ -271,8 +289,8 @@ namespace LogicaProgramacao
             #region Chamadas de classes
 
             //PrimeiraClasse primeiraClasse = new PrimeiraClasse();
-            ////primeiraClasse.NomeDoUsuario = "Matheus feitoza";
-            ////primeiraClasse.Idade = 10;
+            //primeiraClasse.NomeDoUsuario = "Matheus feitoza";
+            //primeiraClasse.Idade = 10;
 
             ////primeiraClasse = new PrimeiraClasse(27);
 
@@ -302,7 +320,7 @@ namespace LogicaProgramacao
             //customers.Add(customerPositivo);
             //customers.Add(customerSamsung);
 
-            //foreach(var item in customers)
+            //foreach (var item in customers)
             //{
             //    string texto = "";
 
@@ -357,7 +375,7 @@ namespace LogicaProgramacao
             //conteudo += string.Format("Factory: {0} \n", assembly.Factory.Name);
             //conteudo += string.Format("Customer Name: {0} \n", assembly.Customer.CustomerName);
 
-            //foreach(var item in assembly.Properties)
+            //foreach (var item in assembly.Properties)
             //{
             //    conteudo += string.Format("Property: {0}, Value: {1} \n", item.PropertyName, item.PropertyValue);
             //}
@@ -383,74 +401,74 @@ namespace LogicaProgramacao
             #endregion
 
             #region Files
-            string path = @"C:\AiOLog.txt";
+            //string path = @"C:\AiOLog.txt";
 
-            var fileExists = File.Exists(path);
+            //var fileExists = File.Exists(path);
 
-            File.Delete(path);
-            File.Copy(path, @"D:\novo.txt", true);
+            //File.Delete(path);
+            //File.Copy(path, @"D:\novo.txt", true);
 
-            File.WriteAllText(path, "Teste Matheus");
+            //File.WriteAllText(path, "Teste Matheus");
 
-            if (fileExists)
-            {
-                Console.WriteLine("Arquivo existe!");
-            }
-            else
-            {
-                Console.WriteLine("Arquivo não existe!");
-            }
+            //if (fileExists)
+            //{
+            //    Console.WriteLine("Arquivo existe!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Arquivo não existe!");
+            //}
 
             #endregion
 
             #region Directory
-            string dir = @"C:\Projetos\";
+            //string dir = @"C:\Projetos\";
 
-            var dirExists = Directory.Exists(dir);
+            //var dirExists = Directory.Exists(dir);
 
-            if(!dirExists)
-            {
-                Directory.CreateDirectory(dir);
-            }
+            //if(!dirExists)
+            //{
+            //    Directory.CreateDirectory(dir);
+            //}
 
-            //Directory.Delete(dir);
+            ////Directory.Delete(dir);
 
-            var files = Directory.GetFiles(dir);
+            //var files = Directory.GetFiles(dir);
 
-            foreach(var item in files)
-            {
-                try
-                {
-                    string serial = "";
-                    string conteudo = "";
+            //foreach(var item in files)
+            //{
+            //    try
+            //    {
+            //        string serial = "";
+            //        string conteudo = "";
 
-                    var strReadAllText = File.ReadAllText(item);
-                    var strReadAllLines = File.ReadAllLines(item);
+            //        var strReadAllText = File.ReadAllText(item);
+            //        var strReadAllLines = File.ReadAllLines(item);
 
-                    FileInfo fileInfo = new FileInfo(item);
+            //        FileInfo fileInfo = new FileInfo(item);
 
-                    //Char e String
-                    // 'C' "C"
+            //        //Char e String
+            //        // 'C' "C"
 
-                    serial = fileInfo.Name.Split('.')[3];
+            //        serial = fileInfo.Name.Split('.')[3];
 
-                    conteudo += "C" + Constant.Customer + Environment.NewLine;
-                    conteudo += "I" + Constant.Division + Environment.NewLine;
-                    conteudo += "S" + serial + Environment.NewLine;
-                    conteudo += "P" + Constant.Equipment + Environment.NewLine;
-                    conteudo += "F" + Constant.Test + Environment.NewLine;
-                    conteudo += "TP" + Environment.NewLine;
+            //        conteudo += "C" + Constant.Customer + Environment.NewLine;
+            //        conteudo += "I" + Constant.Division + Environment.NewLine;
+            //        conteudo += "S" + serial + Environment.NewLine;
+            //        conteudo += "P" + Constant.Equipment + Environment.NewLine;
+            //        conteudo += "F" + Constant.Test + Environment.NewLine;
+            //        conteudo += "TP" + Environment.NewLine;
 
-                    File.WriteAllText(dir + "parser01.txt", conteudo);
-                }
-                catch(Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+            //        File.WriteAllText(dir + "parser01.txt", conteudo);
+            //    }
+            //    catch(Exception ex)
+            //    {
+            //        Console.WriteLine(ex.Message);
+            //    }
                
 
-                Console.WriteLine(item);
-            }
+            //    Console.WriteLine(item);
+            //}
 
            
 

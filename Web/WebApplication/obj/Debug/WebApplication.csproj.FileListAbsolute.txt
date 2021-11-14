@@ -57,3 +57,5 @@ D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\Web\WebApplication\bin\En
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\Web\WebApplication\bin\EntityFramework.SqlServer.dll
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\Web\WebApplication\bin\EntityFramework.xml
 D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\Web\WebApplication\bin\EntityFramework.SqlServer.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\Web\WebApplication\bin\Newtonsoft.Json.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\Web\WebApplication\bin\Newtonsoft.Json.xml

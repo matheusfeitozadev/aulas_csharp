@@ -1,0 +1,151 @@
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\WebAPI.dll.config
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\WebAPI.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\WebAPI.pdb
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\csc.exe
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\csc.exe.config
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\csc.rsp
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\csi.exe
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\csi.rsp
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\System.AppContext.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\vbc.exe
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\vbc.exe.config
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\vbc.rsp
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\VBCSCompiler.exe
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\Antlr3.Runtime.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\Newtonsoft.Json.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Helpers.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Http.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Mvc.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Optimization.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Razor.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.WebPages.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\WebGrease.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\Newtonsoft.Json.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Helpers.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Http.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Mvc.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Optimization.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.Razor.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.WebPages.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\Antlr3.Runtime.pdb
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\obj\Debug\WebAPI.csprojAssemblyReference.cache
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\obj\Debug\WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\obj\Debug\WebAPI.csproj.CopyComplete
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\obj\Debug\WebAPI.dll
+C:\Users\MATHEUS FEITOZA\source\repos\WebAPI\obj\Debug\WebAPI.pdb
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\WebAPI.dll.config
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\WebAPI.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\WebAPI.pdb
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\csc.exe
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\csc.exe.config
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\csc.rsp
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\csi.exe
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\csi.rsp
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\System.AppContext.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\System.Collections.Immutable.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\System.IO.FileSystem.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\System.Reflection.Metadata.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\vbc.exe
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\vbc.exe.config
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\vbc.rsp
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\VBCSCompiler.exe
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\roslyn\VBCSCompiler.exe.config
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\Antlr3.Runtime.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\Newtonsoft.Json.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Net.Http.Formatting.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Helpers.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Http.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Http.WebHost.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Mvc.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Optimization.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Razor.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.WebPages.Deployment.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.WebPages.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.WebPages.Razor.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\WebApplication.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\WebGrease.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\EntityFramework.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\Newtonsoft.Json.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Net.Http.Formatting.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Helpers.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Http.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Http.WebHost.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Mvc.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Optimization.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.Razor.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.WebPages.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.WebPages.Deployment.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\System.Web.WebPages.Razor.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\WebApplication.pdb
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\WebApplication.dll.config
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\Antlr3.Runtime.pdb
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\EntityFramework.xml
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\pt-br\System.Net.Http.Formatting.resources.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\pt-br\System.Web.Helpers.resources.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\pt-br\System.Web.Http.resources.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\pt-br\System.Web.Http.WebHost.resources.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\pt-br\System.Web.Mvc.resources.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\pt-br\System.Web.Optimization.resources.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\pt-br\System.Web.Razor.resources.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\pt-br\System.Web.WebPages.resources.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\obj\Debug\WebAPI.csprojAssemblyReference.cache
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\obj\Debug\WebAPI.csproj.CoreCompileInputs.cache
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\obj\Debug\WebAPI.csproj.CopyComplete
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\obj\Debug\WebAPI.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\obj\Debug\WebAPI.pdb
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\EntityFramework.SqlServer.dll
+D:\PJ\Curso Desenvolvimento em Apps\Aulas\aulas_csharp\WebAPI\bin\EntityFramework.SqlServer.xml

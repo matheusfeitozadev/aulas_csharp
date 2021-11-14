@@ -1,10 +1,13 @@
 ﻿using LogicaProgramacao.Classes.Assembly;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,9 +23,11 @@ namespace WinForms.Forms.AssemblyInsertion
         {
             InitializeComponent();
 
-            entityCustomer = new EntityCustomer();
+            //entityCustomer = new EntityCustomer();
 
-            ReturnInformationFromDatabase();
+            //ReturnInformationFromDatabase();
+
+            btnSearch_Click(null, null);
         }
 
         private void ReturnInformationFromDatabase()
@@ -31,6 +36,32 @@ namespace WinForms.Forms.AssemblyInsertion
 
             FillListView(customers);
             FillGridView(customers);
+        }
+
+        private async Task<List<CustomerViewModel>> AccessAPI()
+        {
+            List<CustomerViewModel> list = new List<CustomerViewModel>();
+
+            try
+            {
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri("http://localhost:62778/");
+
+                var respose = await client.GetAsync("api/customers");
+
+                if (respose.IsSuccessStatusCode)
+                {
+                    var json = await respose.Content.ReadAsStringAsync();
+
+                    list = JsonConvert.DeserializeObject<List<CustomerViewModel>>(json);
+                }
+            }
+            catch(Exception ex)
+            {
+                
+            }
+
+            return list;
         }
 
         private void FillListView(List<CustomerViewModel> list)
@@ -68,25 +99,30 @@ namespace WinForms.Forms.AssemblyInsertion
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private async void btnSearch_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtCustomer.Text))
-            {
-                //Contains = LIKE
-                var listTemp = customers.Where(x => 
-                    x.CustomerName.ToUpper().Contains(txtCustomer.Text.ToUpper().Trim()) && x.Active == ckbActive.Checked).ToList();
+            var customers = await AccessAPI();
 
-                FillListView(listTemp);
-                FillGridView(listTemp);
-            }
-            else
-            {
-                var listTemp = customers.Where(x =>
-                    x.Active == ckbActive.Checked).ToList();
+            FillListView(customers);
+            FillGridView(customers);
 
-                FillListView(listTemp);
-                FillGridView(listTemp);
-            }
+            //if (!string.IsNullOrEmpty(txtCustomer.Text))
+            //{
+            //    //Contains = LIKE
+            //    var listTemp = customers.Where(x => 
+            //        x.CustomerName.ToUpper().Contains(txtCustomer.Text.ToUpper().Trim()) && x.Active == ckbActive.Checked).ToList();
+
+            //    FillListView(listTemp);
+            //    FillGridView(listTemp);
+            //}
+            //else
+            //{
+            //    var listTemp = customers.Where(x =>
+            //        x.Active == ckbActive.Checked).ToList();
+
+            //    FillListView(listTemp);
+            //    FillGridView(listTemp);
+            //}
         }
 
         private void btnClear_Click(object sender, EventArgs e)

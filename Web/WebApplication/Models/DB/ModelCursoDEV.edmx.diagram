@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="bce7bbd587eb42b9a5fef9a89949b1ad" Name="Diagram1">
-        <EntityTypeShape EntityType="CursoDEVModel.Assembly" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="CursoDEVModel.AssemblyProperty" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CursoDEVModel.Customer" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CursoDEVModel.Factory" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CursoDEVModel.Property" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CursoDEVModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="CursoDEVModel.FK_Assembly_Customer" ManuallyRouted="false" />
-        <AssociationConnector Association="CursoDEVModel.FK_Assembly_Factory" ManuallyRouted="false" />
-        <AssociationConnector Association="CursoDEVModel.FK_AssemblyProperties_Assembly" ManuallyRouted="false" />
-        <AssociationConnector Association="CursoDEVModel.FK_AssemblyProperties_Property" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CursoDEVModel.Assembly" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="CursoDEVModel.AssemblyProperty" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="CursoDEVModel.Customer" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="CursoDEVModel.Factory" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="CursoDEVModel.Property" Width="1.5" PointX="3" PointY="5.375" />
+        <EntityTypeShape EntityType="CursoDEVModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" />
+        <AssociationConnector Association="CursoDEVModel.FK_Assembly_Customer" />
+        <AssociationConnector Association="CursoDEVModel.FK_Assembly_Factory" />
+        <AssociationConnector Association="CursoDEVModel.FK_AssemblyProperties_Assembly" />
+        <AssociationConnector Association="CursoDEVModel.FK_AssemblyProperties_Property" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

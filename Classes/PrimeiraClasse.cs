@@ -47,14 +47,14 @@ namespace LogicaProgramacao.Classes
 
         public void CalcularIdadeAtual()
         {
-            int anoAtual = 2021;
+            int anoAtual = DateTime.Now.Year;
 
             Idade = anoAtual - AnoNascimento;
         }
 
         public static int Chamada()
         {
-            int anoAtual = 2021;
+            int anoAtual = DateTime.Now.Year;
             int anoNascimento = 1995;
 
             return anoAtual - anoNascimento;
